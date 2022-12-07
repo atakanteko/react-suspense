@@ -4,15 +4,18 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Suspense } from "react";
 import { AppLoader } from './component/loader/AppLoader';
-
+import ErrorBoundary from './component/error-boundary/ErrorBoundary';
+import { ErrorPage } from './component/error-boundary/ErrorPage';
 const App = React.lazy(() => import('./App'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ErrorBoundary fallback={ <ErrorPage /> }>
       <Suspense fallback={ <AppLoader /> }>
         <App />
       </Suspense>
+    </ErrorBoundary>
   </React.StrictMode>
 );
 

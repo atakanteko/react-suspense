@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
- 
+  // throw an error to test the error boundary
+  throw new Error("Error occurred");
   return (
     <div className="App">
       <header className="App-header">
