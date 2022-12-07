@@ -1,27 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import UserDashboard from './component/dashboard/UserDashboard';
 
 function App() {
-  // throw an error to test the error boundary
-  throw new Error("Error occurred");
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <UserDashboard />;
 }
 
 export default App;
